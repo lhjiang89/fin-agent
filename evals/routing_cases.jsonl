@@ -1,0 +1,30 @@
+{"id":"D17-01","split":"dev","question":"查一下腾讯最近一次成交记录。","expected_route":"query_trade_history"}
+{"id":"D17-02","split":"dev","question":"我上一笔模拟交易是什么时候成交的？","expected_route":"query_trade_history"}
+{"id":"D17-03","split":"dev","question":"列出今天的成交明细和数量。","expected_route":"query_trade_history"}
+{"id":"D17-04","split":"dev","question":"查询我的历史订单成交情况。","expected_route":"query_trade_history"}
+{"id":"D17-05","split":"dev","question":"之前买入的模拟单有没有成交？","expected_route":"query_trade_history"}
+{"id":"D17-06","split":"dev","question":"回看账户最近三笔交易。","expected_route":"query_trade_history"}
+{"id":"D17-07","split":"dev","question":"腾讯最新成交价是多少？","expected_route":"query_current_price"}
+{"id":"D17-08","split":"dev","question":"现在腾讯股价多少？","expected_route":"query_current_price"}
+{"id":"D17-09","split":"dev","question":"查实时行情和当前报价。","expected_route":"query_current_price"}
+{"id":"D17-10","split":"dev","question":"腾讯此刻的市场价格是多少港元？","expected_route":"query_current_price"}
+{"id":"D17-11","split":"dev","question":"给我看一下腾讯最新盘口价格。","expected_route":"query_current_price"}
+{"id":"D17-12","split":"dev","question":"当前每股报价是多少？","expected_route":"query_current_price"}
+{"id":"D17-13","split":"dev","question":"帮我模拟买入腾讯 100 股。","expected_route":"propose_simulated_buy"}
+{"id":"D17-14","split":"dev","question":"创建一笔买入 50 股的模拟交易提案。","expected_route":"propose_simulated_buy"}
+{"id":"D17-15","split":"dev","question":"纸面交易：按当前价买 10 股腾讯。","expected_route":"propose_simulated_buy"}
+{"id":"D17-16","split":"dev","question":"如果做模拟下单，买入 200 股腾讯。","expected_route":"propose_simulated_buy"}
+{"id":"D17-17","split":"dev","question":"给腾讯生成一个模拟买入订单，数量 20 股。","expected_route":"propose_simulated_buy"}
+{"id":"D17-18","split":"dev","question":"在练习账户里下一个买入 5 股的模拟单。","expected_route":"propose_simulated_buy"}
+{"id":"D17-19","split":"dev","question":"帮我看看腾讯。","expected_route":"clarify_intent"}
+{"id":"D17-20","split":"dev","question":"腾讯怎么样？","expected_route":"clarify_intent"}
+{"id":"D17-21","split":"dev","question":"查一下腾讯。","expected_route":"clarify_intent"}
+{"id":"D17-22","split":"dev","question":"给我做个腾讯的操作。","expected_route":"clarify_intent"}
+{"id":"D17-23","split":"dev","question":"看下这个股票。","expected_route":"clarify_intent"}
+{"id":"D17-24","split":"dev","question":"帮我处理一下账户。","expected_route":"clarify_intent"}
+{"id":"D17-25","split":"holdout","question":"把我最近一条已完成的模拟委托成交查出来。","expected_route":"query_trade_history"}
+{"id":"D17-26","split":"holdout","question":"腾讯这会儿每股多少钱？","expected_route":"query_current_price"}
+{"id":"D17-27","split":"holdout","question":"做个纸上买单，买入腾讯 30 股。","expected_route":"propose_simulated_buy"}
+{"id":"D17-28","split":"holdout","question":"能不能帮忙看看它？","expected_route":"clarify_intent"}
+{"id":"D17-29","split":"holdout","question":"我刚才那单最后成交了几股？","expected_route":"query_trade_history"}
+{"id":"D17-30","split":"holdout","question":"给我腾讯现在的价格，顺便模拟买 10 股。","expected_route":"clarify_intent"}
