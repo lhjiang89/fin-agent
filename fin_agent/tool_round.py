@@ -20,10 +20,12 @@ class RunResult:
     tool_calls: int
 
 
-def run_agent(model, question: str, cutoff: str, max_steps: int = 5, timeout_seconds: float = 30, max_retries: int = 1) -> RunResult:
+def run_agent(model, question: str, cutoff: str, max_steps: int = 5, timeout_seconds: float = 30,
+              max_retries: int = 1, tool_schemas=None) -> RunResult:
     """Run a bounded read-only agent; timed-out in-flight calls may finish in background."""
     if max_steps < 0 or timeout_seconds <= 0 or max_retries < 0:
         raise ValueError("max_steps and max_retries must be nonnegative and timeout_seconds positive")
+    tool_schemas = TOOL_SCHEMAS if tool_schemas is None else tool_schemas
     messages = [{"role": "user", "content": question}]
     deadline = time.monotonic() + timeout_seconds
     executed = 0
@@ -42,7 +44,7 @@ def run_agent(model, question: str, cutoff: str, max_steps: int = 5, timeout_sec
 
     try:
         while True:
-            assistant = call_with_deadline(model.complete, list(messages), TOOL_SCHEMAS)
+            assistant = call_with_deadline(model.complete, list(messages), tool_schemas)
             calls = assistant.get("tool_calls") or []
             if not calls:
                 messages.append(assistant)

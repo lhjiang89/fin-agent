@@ -1,0 +1,50 @@
+day20 split=dev repeat=1 arm=original case=D16-01 status=completed elapsed_ms=2585.53
+day20 split=dev repeat=1 arm=revised case=D16-01 status=completed elapsed_ms=1860.25
+{
+  "report": "evals/runs/day20_54bbbacc64a44c6bb4c0040b5590390a.json",
+  "development": {
+    "original": {
+      "success_count": 1,
+      "case_count": 1,
+      "answer_pass_rate": 1.0,
+      "dimension_pass_rates": {
+        "action": 1.0,
+        "numeric": 1.0,
+        "citation": 1.0,
+        "as_of": 1.0,
+        "missing_information": 1.0
+      },
+      "unanswerable_count": 0,
+      "requests": 2,
+      "tool_calls": 1,
+      "prompt_tokens": 1358,
+      "completion_tokens": 121,
+      "total_tokens": 1479,
+      "elapsed_ms_total": 2585.53,
+      "tokens_per_success": 1479.0,
+      "errors": []
+    },
+    "revised": {
+      "success_count": 1,
+      "case_count": 1,
+      "answer_pass_rate": 1.0,
+      "dimension_pass_rates": {
+        "action": 1.0,
+        "numeric": 1.0,
+        "citation": 1.0,
+        "as_of": 1.0,
+        "missing_information": 1.0
+      },
+      "unanswerable_count": 0,
+      "requests": 2,
+      "tool_calls": 1,
+      "prompt_tokens": 1392,
+      "completion_tokens": 121,
+      "total_tokens": 1513,
+      "elapsed_ms_total": 1860.25,
+      "tokens_per_success": 1513.0,
+      "errors": []
+    }
+  },
+  "holdout": null
+}

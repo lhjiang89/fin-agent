@@ -1,0 +1,4 @@
+工具：内置 imagegen。参考：幺幺.png、德芙.png。
+生成后检查：左猫两只前爪可见；右猫一只前爪可见，另一只由电脑遮挡；没有额外前肢。
+最终生成提示词：
+Use case: ads-marketing. Create a polished Xiaohongshu tutorial cover, portrait 3:4. Reference image 1 is 幺幺, blue-eyed pale longhair tabby; reference image 2 is 德芙, green-eyed dark brown longhair tabby. Use both recognizable cats transformed into charming high-quality 3D cartoon teacher characters at bottom half: one holds smartphone, one at laptop, with small connecting arrows. Warm ivory background, deep teal typography, orange accents, generous whitespace, editorial tech tutorial aesthetic. Exact large Chinese headline at top:「用微信给 Codex 发任务」. Smaller subtitle「Mac 小白搭建指南」. Small pill「原理 · 步骤 · 避坑」. Bottom tiny label「幺幺 & 德芙的 AI 小课堂」. Do not imply official OpenAI integration. No QR codes, no invented UI screenshots. Large crisp legible Chinese, premium clean layout.

@@ -1,0 +1,2 @@
+day20 split=dev repeat=1 arm=original case=D16-01 status=completed elapsed_ms=1990.35
+day20 split=dev repeat=1 arm=revised case=D16-01 status=completed elapsed_ms=2400.66

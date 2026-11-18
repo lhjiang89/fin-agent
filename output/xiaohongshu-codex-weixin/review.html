@@ -1,0 +1,32 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>小红书图文审核</title><style>body{margin:0;background:#ebe8df;color:#123e3b;font:18px/1.7 system-ui}main{max-width:1100px;margin:auto;padding:35px}h1{font-size:32px}pre{white-space:pre-wrap;background:white;padding:25px;border-radius:16px}section{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}img{width:100%;border-radius:12px}p{margin:10px 0}a{color:#a64424}@media(max-width:700px){section{grid-template-columns:1fr}}</style><main><h1>用微信给 Codex 发任务</h1><p>待审核 · 11 张图 · 尚未发布</p><p>固定版本复现；采用 Codex 协助搭建方式。最后的会话冲突未记录修复，不声称无故障。</p><p><a href="完整审核稿.md">完整稿与来源</a> · <a href="配置提示词.txt">复制配置提示词</a> · <a href="发布文案.txt">发布文案</a></p><pre>标题：用微信给Codex发任务！Mac搭建教程
+
+出门只带手机，也能从微信给 Mac 上的 Codex 发任务？可以用桥接实现🐱
+
+这次让幺幺和德芙当讲解员，带你看懂原理、准备环境、扫码和验收。
+
+📌先看懂原理
+微信 ClawBot → 腾讯 iLink → Mac 上的 OpenClaw → Codex CLI；回复沿原路返回。OpenClaw 负责传话，Codex 负责执行。
+
+📌这篇怎么跟
+① 准备 Mac、微信和可用的 Codex 账号
+② 安装 Node.js 22（≥22.16）和 Codex CLI，先登录
+③ 按图把配置要求交给 Codex，让它逐项检查、搭建
+④ 先验本地回复和上下文，再扫码
+⑤ 微信里测两轮；通过后再设后台运行
+
+适合小白的重点：不用自己手写配置文件，但每一步都要看“成功标志”，遇到报错先停在当前步骤。
+
+⚠️版本要对齐
+这是原搭建记录的固定版本复现：OpenClaw 2026.5.12＋微信插件 2.4.10。新版已调整 Codex 接入方式，不要直接混用命令；旧版方案也不等于长期维护建议。
+
+⚠️我实际踩到的坑
+• 桌面端的回复不会自动发到微信。
+• 同一会话被桌面端和微信同时写入，会报 active writer；先退出占用该会话的客户端/终端，等待任务结束，再从微信重试。不要删会话文件。
+• 电脑休眠、断网或服务退出，机器人就可能不回复。
+• 扫码绑定的是机器人对话，不会自动获得读取全部聊天、代你给任意好友发消息的权限。
+
+✅验收标准：微信收到指定回复＋下一轮记住暗号，才算最小链路跑通。
+
+本文基于一次真实搭建记录整理；最后一轮会话冲突尚未记录修复结果。你自己的环境仍需按图验收。
+
+#Codex #微信机器人 #AI工具 #Mac教程 #小白教程 #效率工具</pre><section><article><p>01 / 11</p><a href="01.png"><img src="01.png"></a></article><article><p>02 / 11</p><a href="02.png"><img src="02.png"></a></article><article><p>03 / 11</p><a href="03.png"><img src="03.png"></a></article><article><p>04 / 11</p><a href="04.png"><img src="04.png"></a></article><article><p>05 / 11</p><a href="05.png"><img src="05.png"></a></article><article><p>06 / 11</p><a href="06.png"><img src="06.png"></a></article><article><p>07 / 11</p><a href="07.png"><img src="07.png"></a></article><article><p>08 / 11</p><a href="08.png"><img src="08.png"></a></article><article><p>09 / 11</p><a href="09.png"><img src="09.png"></a></article><article><p>10 / 11</p><a href="10.png"><img src="10.png"></a></article><article><p>11 / 11</p><a href="11.png"><img src="11.png"></a></article></section></main></html>

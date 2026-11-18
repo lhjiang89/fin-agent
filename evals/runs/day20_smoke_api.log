@@ -1,0 +1,468 @@
+deepseek_request_payload={
+  "model": "deepseek-flash",
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是 Fin-Agent 的离线评测助手。数据截止日期为 2026-11-13，只能使用用户消息或工具返回的数据。请仅输出 JSON 对象，字段为 action、as_of、citations、missing_information。action 必须为 answer、insufficient_data 或 reject_future_data。有计算变化率时加 change_percent；询问单日或多日具体值时，把日期作为键并给数值。引用只能写证据中的日期；as_of 必须填 2026-11-13。missing_information 必须是字符串数组，只列缺失字段名称。缺少所需字段时明确填写，不可编造。若问题询问截至日期之后的数据，action 用 reject_future_data。"
+    },
+    {
+      "role": "user",
+      "content": "截至 11 月 13 日，最近两个交易日收盘价的涨跌幅是多少？\n请仅输出 JSON；数值字段键必须使用 [\"change_percent\"]。"
+    }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "get_prices",
+        "description": "查询指定股票的历史日线行情。截止日期由应用控制。",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "symbol": {
+              "const": "HK.00700",
+              "description": "股票代码；当前仅支持腾讯 HK.00700",
+              "title": "Symbol",
+              "type": "string"
+            }
+          },
+          "required": [
+            "symbol"
+          ],
+          "title": "ToolArguments",
+          "type": "object"
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_filings",
+        "description": "搜索指定股票的公告标题、日期和来源链接；搜索结果可能不完整。截止日期由应用控制。",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "symbol": {
+              "const": "HK.00700",
+              "description": "股票代码；当前仅支持腾讯 HK.00700",
+              "title": "Symbol",
+              "type": "string"
+            }
+          },
+          "required": [
+            "symbol"
+          ],
+          "title": "ToolArguments",
+          "type": "object"
+        }
+      }
+    }
+  ],
+  "temperature": 0,
+  "max_tokens": 600,
+  "thinking": {
+    "type": "disabled"
+  }
+}
+deepseek_response={
+  "id": "1c57a4ed-33b7-47a9-b03c-d9a984b4310a",
+  "choices": [
+    {
+      "finish_reason": "tool_calls",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "call_00_ObBiEmJb4GgolNmQ9qIv9173",
+            "function": {
+              "arguments": "{\"symbol\": \"HK.00700\"}",
+              "name": "get_prices"
+            },
+            "type": "function",
+            "index": 0
+          }
+        ]
+      }
+    }
+  ],
+  "created": 1794904702,
+  "model": "deepseek-flash",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+  "usage": {
+    "completion_tokens": 41,
+    "prompt_tokens": 615,
+    "total_tokens": 656,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 231
+  }
+}
+deepseek_request_payload={
+  "model": "deepseek-flash",
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是 Fin-Agent 的离线评测助手。数据截止日期为 2026-11-13，只能使用用户消息或工具返回的数据。请仅输出 JSON 对象，字段为 action、as_of、citations、missing_information。action 必须为 answer、insufficient_data 或 reject_future_data。有计算变化率时加 change_percent；询问单日或多日具体值时，把日期作为键并给数值。引用只能写证据中的日期；as_of 必须填 2026-11-13。missing_information 必须是字符串数组，只列缺失字段名称。缺少所需字段时明确填写，不可编造。若问题询问截至日期之后的数据，action 用 reject_future_data。"
+    },
+    {
+      "role": "user",
+      "content": "截至 11 月 13 日，最近两个交易日收盘价的涨跌幅是多少？\n请仅输出 JSON；数值字段键必须使用 [\"change_percent\"]。"
+    },
+    {
+      "content": "",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "id": "call_00_ObBiEmJb4GgolNmQ9qIv9173",
+          "function": {
+            "arguments": "{\"symbol\": \"HK.00700\"}",
+            "name": "get_prices"
+          },
+          "type": "function",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_00_ObBiEmJb4GgolNmQ9qIv9173",
+      "content": "[{\"symbol\": \"HK.00700\", \"date\": \"2026-11-12\", \"close\": 398.8, \"source\": \"futu-opend\"}, {\"symbol\": \"HK.00700\", \"date\": \"2026-11-13\", \"close\": 386.6, \"source\": \"futu-opend\"}]"
+    }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "get_prices",
+        "description": "查询指定股票的历史日线行情。截止日期由应用控制。",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "symbol": {
+              "const": "HK.00700",
+              "description": "股票代码；当前仅支持腾讯 HK.00700",
+              "title": "Symbol",
+              "type": "string"
+            }
+          },
+          "required": [
+            "symbol"
+          ],
+          "title": "ToolArguments",
+          "type": "object"
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_filings",
+        "description": "搜索指定股票的公告标题、日期和来源链接；搜索结果可能不完整。截止日期由应用控制。",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "symbol": {
+              "const": "HK.00700",
+              "description": "股票代码；当前仅支持腾讯 HK.00700",
+              "title": "Symbol",
+              "type": "string"
+            }
+          },
+          "required": [
+            "symbol"
+          ],
+          "title": "ToolArguments",
+          "type": "object"
+        }
+      }
+    }
+  ],
+  "temperature": 0,
+  "max_tokens": 600,
+  "thinking": {
+    "type": "disabled"
+  }
+}
+deepseek_response={
+  "id": "c5dbc029-9c4a-4d8b-8fff-d8727995a22e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"action\": \"answer\", \"as_of\": \"2026-11-13\", \"citations\": [\"2026-11-12\", \"2026-11-13\"], \"missing_information\": [], \"change_percent\": -3.06, \"2026-11-12\": 398.8, \"2026-11-13\": 386.6}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794904703,
+  "model": "deepseek-flash",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+  "usage": {
+    "completion_tokens": 80,
+    "prompt_tokens": 743,
+    "total_tokens": 823,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 231
+  }
+}
+deepseek_request_payload={
+  "model": "deepseek-flash",
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是 Fin-Agent 的离线评测助手。数据截止日期为 2026-11-13，只能使用用户消息或工具返回的数据。请仅输出 JSON 对象，字段为 action、as_of、citations、missing_information。action 必须为 answer、insufficient_data 或 reject_future_data。有计算变化率时加 change_percent；询问单日或多日具体值时，把日期作为键并给数值。引用只能写证据中的日期；as_of 必须填 2026-11-13。missing_information 必须是字符串数组，只列缺失字段名称。缺少所需字段时明确填写，不可编造。若问题询问截至日期之后的数据，action 用 reject_future_data。"
+    },
+    {
+      "role": "user",
+      "content": "截至 11 月 13 日，最近两个交易日收盘价的涨跌幅是多少？\n请仅输出 JSON；数值字段键必须使用 [\"change_percent\"]。"
+    }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "get_prices",
+        "description": "查询指定股票的历史日线 OHLCV。此工具不提供实时现价、历史成交记录或估值指标。截止日期由应用控制。",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "symbol": {
+              "const": "HK.00700",
+              "description": "股票代码；当前仅支持腾讯 HK.00700",
+              "title": "Symbol",
+              "type": "string"
+            }
+          },
+          "required": [
+            "symbol"
+          ],
+          "title": "ToolArguments",
+          "type": "object"
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_filings",
+        "description": "搜索指定股票的公告标题、日期和来源链接；搜索结果可能不完整。截止日期由应用控制。",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "symbol": {
+              "const": "HK.00700",
+              "description": "股票代码；当前仅支持腾讯 HK.00700",
+              "title": "Symbol",
+              "type": "string"
+            }
+          },
+          "required": [
+            "symbol"
+          ],
+          "title": "ToolArguments",
+          "type": "object"
+        }
+      }
+    }
+  ],
+  "temperature": 0,
+  "max_tokens": 600,
+  "thinking": {
+    "type": "disabled"
+  }
+}
+deepseek_response={
+  "id": "8de884f5-b289-4f67-868c-402318e74c68",
+  "choices": [
+    {
+      "finish_reason": "tool_calls",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "call_00_H8Josc6Nn0aj3sUxYHLB7291",
+            "function": {
+              "arguments": "{\"symbol\": \"HK.00700\"}",
+              "name": "get_prices"
+            },
+            "type": "function",
+            "index": 0
+          }
+        ]
+      }
+    }
+  ],
+  "created": 1794904705,
+  "model": "deepseek-flash",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+  "usage": {
+    "completion_tokens": 41,
+    "prompt_tokens": 632,
+    "total_tokens": 673,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 248
+  }
+}
+deepseek_request_payload={
+  "model": "deepseek-flash",
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是 Fin-Agent 的离线评测助手。数据截止日期为 2026-11-13，只能使用用户消息或工具返回的数据。请仅输出 JSON 对象，字段为 action、as_of、citations、missing_information。action 必须为 answer、insufficient_data 或 reject_future_data。有计算变化率时加 change_percent；询问单日或多日具体值时，把日期作为键并给数值。引用只能写证据中的日期；as_of 必须填 2026-11-13。missing_information 必须是字符串数组，只列缺失字段名称。缺少所需字段时明确填写，不可编造。若问题询问截至日期之后的数据，action 用 reject_future_data。"
+    },
+    {
+      "role": "user",
+      "content": "截至 11 月 13 日，最近两个交易日收盘价的涨跌幅是多少？\n请仅输出 JSON；数值字段键必须使用 [\"change_percent\"]。"
+    },
+    {
+      "content": "",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "id": "call_00_H8Josc6Nn0aj3sUxYHLB7291",
+          "function": {
+            "arguments": "{\"symbol\": \"HK.00700\"}",
+            "name": "get_prices"
+          },
+          "type": "function",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_00_H8Josc6Nn0aj3sUxYHLB7291",
+      "content": "[{\"symbol\": \"HK.00700\", \"date\": \"2026-11-12\", \"close\": 398.8, \"source\": \"futu-opend\"}, {\"symbol\": \"HK.00700\", \"date\": \"2026-11-13\", \"close\": 386.6, \"source\": \"futu-opend\"}]"
+    }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "get_prices",
+        "description": "查询指定股票的历史日线 OHLCV。此工具不提供实时现价、历史成交记录或估值指标。截止日期由应用控制。",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "symbol": {
+              "const": "HK.00700",
+              "description": "股票代码；当前仅支持腾讯 HK.00700",
+              "title": "Symbol",
+              "type": "string"
+            }
+          },
+          "required": [
+            "symbol"
+          ],
+          "title": "ToolArguments",
+          "type": "object"
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_filings",
+        "description": "搜索指定股票的公告标题、日期和来源链接；搜索结果可能不完整。截止日期由应用控制。",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "symbol": {
+              "const": "HK.00700",
+              "description": "股票代码；当前仅支持腾讯 HK.00700",
+              "title": "Symbol",
+              "type": "string"
+            }
+          },
+          "required": [
+            "symbol"
+          ],
+          "title": "ToolArguments",
+          "type": "object"
+        }
+      }
+    }
+  ],
+  "temperature": 0,
+  "max_tokens": 600,
+  "thinking": {
+    "type": "disabled"
+  }
+}
+deepseek_response={
+  "id": "ab70e9d4-ddd0-4d41-aadc-2a91d9a990b8",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"action\": \"answer\", \"as_of\": \"2026-11-13\", \"citations\": [\"2026-11-12\", \"2026-11-13\"], \"missing_information\": [], \"change_percent\": -3.06, \"2026-11-12\": 398.8, \"2026-11-13\": 386.6}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1794904706,
+  "model": "deepseek-flash",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+  "usage": {
+    "completion_tokens": 80,
+    "prompt_tokens": 760,
+    "total_tokens": 840,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 248
+  }
+}

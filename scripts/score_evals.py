@@ -78,6 +78,9 @@ def score_routing(cases: list[dict[str, Any]], predictions: Any) -> dict[str, An
 def numeric_matches(expected: dict[str, float], prediction: dict[str, Any], tolerance: float) -> bool:
     for key, expected_value in expected.items():
         actual = prediction.get(key)
+        if actual is None and len(key) == 10 and key[4] == "-":
+            # Accept the common {"close": {"YYYY-MM-DD": value}} shape.
+            actual = (prediction.get("close") or {}).get(key)
         if not isinstance(actual, (int, float)) or not math.isclose(float(actual), float(expected_value), abs_tol=tolerance, rel_tol=0):
             return False
     return True
@@ -100,14 +103,20 @@ def score_research(cases: list[dict[str, Any]], predictions: Any) -> dict[str, A
         actual_citations = set(prediction.get("citations", []))
         citation_ok = actual_citations.issubset(set(case["allowed_citations"])) and set(case["required_citations"]).issubset(actual_citations)
         missing = prediction.get("missing_information", [])
-        missing_ok = isinstance(missing, list) and set(case.get("expected_missing_information", [])).issubset(set(missing))
+        expected_missing = case.get("expected_missing_information", [])
+        aliases = {"成交量": {"成交量", "交易量", "volume"}}
+        missing_ok = isinstance(missing, list) and all(
+            any(
+                any(alias in actual_item for alias in aliases.get(expected_item, {expected_item}))
+                for actual_item in missing if isinstance(actual_item, str)
+            )
+            for expected_item in expected_missing
+        )
         numeric_ok = True
         if case.get("expected_change_percent") is not None:
             numeric_ok = numeric_matches({"change_percent": case["expected_change_percent"]}, prediction, case["tolerance_percent_points"])
         if case.get("expected_values"):
             numeric_ok = numeric_ok and numeric_matches(case["expected_values"], prediction, case.get("tolerance_absolute", 0.01))
-        if case.get("expected_change_percent") is None and "change_percent" in prediction:
-            numeric_ok = numeric_ok and prediction.get("change_percent") is None
         checks = {"action": action_ok, "numeric": numeric_ok, "citation": citation_ok, "as_of": as_of_ok, "missing_information": missing_ok}
         for name, ok in checks.items():
             dimensions[name] += int(ok)

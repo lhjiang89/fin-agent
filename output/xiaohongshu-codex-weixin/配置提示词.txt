@@ -1,0 +1,8 @@
+请按以下要求帮我在这台 Mac 搭建微信→Codex 桥接。先检查环境，逐步执行，每步解释结果，遇到错误先排查，不要假装成功。
+1. 复用我已登录的 Codex CLI。独立目录 ~/.local/share/codex-weixin；若已存在就先检查并备份，不覆盖现有配置。不改其他 OpenClaw 实例。
+2. 在该目录本地安装 openclaw@2026.5.12 和 @tencent-weixin/openclaw-weixin@2.4.10。使用独立 state、config 和 workspace。创建 ./wx 包装命令，固定 Node 绝对路径，并设置 OPENCLAW_STATE_DIR 和 OPENCLAW_CONFIG_PATH。
+3. 网关 mode=local、bind=loopback、port=19846，使用随机 token 鉴权。端口冲突先告诉我。会话 dmScope=per-account-channel-peer。
+4. plugins.allow 包含 openai 和 openclaw-weixin；从本地 node_modules 加载微信插件并启用。主模型用 codex-cli/加上我账号实际可用的模型名，先用 codex exec 验证，不要照抄别人的模型名。
+5. codex-cli 后端使用本机 codex 绝对路径；首轮 codex exec --json --skip-git-repo-check --sandbox workspace-write；续聊 codex exec -c sandbox_mode="workspace-write" resume --json --skip-git-repo-check {sessionId}。output 和 resumeOutput 均为 jsonl。不要绕过沙箱。
+6. 验证 config validate，以及本地 agent 首轮回复和第二轮记忆。展示结果。然后给我扫码登录命令，等我在手机确认。二维码、token、身份信息不要写入公开材料。
+7. 扫码后启动网关，再检查 channels status，等待我在微信里完成两轮实测。不要提前宣称全链路成功。先以前台运行，后台自启等验证成功后再配。

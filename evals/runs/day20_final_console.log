@@ -1,0 +1,457 @@
+day20 split=dev repeat=1 arm=original case=D16-01 status=completed elapsed_ms=1718.86
+day20 split=dev repeat=1 arm=revised case=D16-01 status=completed elapsed_ms=1873.17
+day20 split=dev repeat=1 arm=revised case=D16-02 status=completed elapsed_ms=1356.03
+day20 split=dev repeat=1 arm=original case=D16-02 status=completed elapsed_ms=2138.67
+day20 split=dev repeat=1 arm=original case=D16-03 status=completed elapsed_ms=1212.89
+day20 split=dev repeat=1 arm=revised case=D16-03 status=completed elapsed_ms=873.21
+day20 split=dev repeat=1 arm=revised case=D16-04 status=completed elapsed_ms=2091.8
+day20 split=dev repeat=1 arm=original case=D16-04 status=completed elapsed_ms=2228.02
+day20 split=dev repeat=1 arm=original case=D16-05 status=completed elapsed_ms=1506.24
+day20 split=dev repeat=1 arm=revised case=D16-05 status=completed elapsed_ms=1742.94
+day20 split=dev repeat=1 arm=revised case=D16-06 status=completed elapsed_ms=2038.95
+day20 split=dev repeat=1 arm=original case=D16-06 status=completed elapsed_ms=2009.89
+day20 split=dev repeat=1 arm=original case=D16-07 status=completed elapsed_ms=1680.48
+day20 split=dev repeat=1 arm=revised case=D16-07 status=completed elapsed_ms=2188.21
+day20 split=dev repeat=1 arm=revised case=D16-08 status=completed elapsed_ms=1647.3
+day20 split=dev repeat=1 arm=original case=D16-08 status=completed elapsed_ms=2094.3
+day20 split=dev repeat=1 arm=original case=D16-09 status=completed elapsed_ms=2582.4
+day20 split=dev repeat=1 arm=revised case=D16-09 status=completed elapsed_ms=2259.59
+day20 split=dev repeat=1 arm=revised case=D16-10 status=completed elapsed_ms=1402.76
+day20 split=dev repeat=1 arm=original case=D16-10 status=completed elapsed_ms=2398.4
+day20 split=dev repeat=2 arm=revised case=D16-01 status=completed elapsed_ms=2096.0
+day20 split=dev repeat=2 arm=original case=D16-01 status=completed elapsed_ms=2150.94
+day20 split=dev repeat=2 arm=original case=D16-02 status=completed elapsed_ms=1796.69
+day20 split=dev repeat=2 arm=revised case=D16-02 status=completed elapsed_ms=1453.17
+day20 split=dev repeat=2 arm=revised case=D16-03 status=completed elapsed_ms=1182.1
+day20 split=dev repeat=2 arm=original case=D16-03 status=completed elapsed_ms=924.06
+day20 split=dev repeat=2 arm=original case=D16-04 status=completed elapsed_ms=2277.1
+day20 split=dev repeat=2 arm=revised case=D16-04 status=completed elapsed_ms=1740.81
+day20 split=dev repeat=2 arm=revised case=D16-05 status=completed elapsed_ms=2534.36
+day20 split=dev repeat=2 arm=original case=D16-05 status=completed elapsed_ms=1726.62
+day20 split=dev repeat=2 arm=original case=D16-06 status=completed elapsed_ms=2512.62
+day20 split=dev repeat=2 arm=revised case=D16-06 status=completed elapsed_ms=1824.47
+day20 split=dev repeat=2 arm=revised case=D16-07 status=completed elapsed_ms=1334.03
+day20 split=dev repeat=2 arm=original case=D16-07 status=completed elapsed_ms=1995.28
+day20 split=dev repeat=2 arm=original case=D16-08 status=completed elapsed_ms=1896.32
+day20 split=dev repeat=2 arm=revised case=D16-08 status=completed elapsed_ms=3056.99
+day20 split=dev repeat=2 arm=revised case=D16-09 status=completed elapsed_ms=1921.59
+day20 split=dev repeat=2 arm=original case=D16-09 status=completed elapsed_ms=1936.2
+day20 split=dev repeat=2 arm=original case=D16-10 status=completed elapsed_ms=2036.54
+day20 split=dev repeat=2 arm=revised case=D16-10 status=completed elapsed_ms=1955.48
+day20 split=dev repeat=3 arm=original case=D16-01 status=completed elapsed_ms=1928.81
+day20 split=dev repeat=3 arm=revised case=D16-01 status=completed elapsed_ms=1880.83
+day20 split=dev repeat=3 arm=revised case=D16-02 status=completed elapsed_ms=1735.2
+day20 split=dev repeat=3 arm=original case=D16-02 status=completed elapsed_ms=1928.02
+day20 split=dev repeat=3 arm=original case=D16-03 status=completed elapsed_ms=1335.82
+day20 split=dev repeat=3 arm=revised case=D16-03 status=completed elapsed_ms=869.48
+day20 split=dev repeat=3 arm=revised case=D16-04 status=completed elapsed_ms=2590.97
+day20 split=dev repeat=3 arm=original case=D16-04 status=completed elapsed_ms=1853.89
+day20 split=dev repeat=3 arm=original case=D16-05 status=completed elapsed_ms=2417.38
+day20 split=dev repeat=3 arm=revised case=D16-05 status=completed elapsed_ms=1888.83
+day20 split=dev repeat=3 arm=revised case=D16-06 status=completed elapsed_ms=2043.91
+day20 split=dev repeat=3 arm=original case=D16-06 status=completed elapsed_ms=1882.7
+day20 split=dev repeat=3 arm=original case=D16-07 status=completed elapsed_ms=1820.89
+day20 split=dev repeat=3 arm=revised case=D16-07 status=completed elapsed_ms=1969.33
+day20 split=dev repeat=3 arm=revised case=D16-08 status=completed elapsed_ms=1990.04
+day20 split=dev repeat=3 arm=original case=D16-08 status=completed elapsed_ms=2754.88
+day20 split=dev repeat=3 arm=original case=D16-09 status=completed elapsed_ms=2148.78
+day20 split=dev repeat=3 arm=revised case=D16-09 status=completed elapsed_ms=1619.38
+day20 split=dev repeat=3 arm=revised case=D16-10 status=completed elapsed_ms=2264.91
+day20 split=dev repeat=3 arm=original case=D16-10 status=completed elapsed_ms=1748.82
+day20 split=holdout repeat=1 arm=revised case=D16-11 status=completed elapsed_ms=1607.42
+day20 split=holdout repeat=1 arm=original case=D16-11 status=completed elapsed_ms=2095.96
+day20 split=holdout repeat=1 arm=original case=D16-12 status=completed elapsed_ms=1730.92
+day20 split=holdout repeat=1 arm=revised case=D16-12 status=completed elapsed_ms=2322.92
+day20 split=holdout repeat=1 arm=revised case=D16-13 status=completed elapsed_ms=2364.36
+day20 split=holdout repeat=1 arm=original case=D16-13 status=completed elapsed_ms=1788.8
+day20 split=holdout repeat=1 arm=original case=D16-14 status=completed elapsed_ms=2223.02
+day20 split=holdout repeat=1 arm=revised case=D16-14 status=completed elapsed_ms=1832.33
+day20 split=holdout repeat=1 arm=revised case=D16-15 status=completed elapsed_ms=908.85
+day20 split=holdout repeat=1 arm=original case=D16-15 status=completed elapsed_ms=1482.63
+{
+  "report": "evals/runs/day20_b24ce3992ae146e184042ab51b631d7c.json",
+  "development": {
+    "original": {
+      "success_count": 30,
+      "case_count": 30,
+      "answer_pass_rate": 1.0,
+      "dimension_pass_rates": {
+        "action": 1.0,
+        "numeric": 1.0,
+        "citation": 1.0,
+        "as_of": 1.0,
+        "missing_information": 1.0
+      },
+      "unanswerable_count": 12,
+      "requests": 57,
+      "tool_calls": 28,
+      "prompt_tokens": 64463,
+      "completion_tokens": 2785,
+      "total_tokens": 67248,
+      "elapsed_ms_total": 58642.51,
+      "tokens_per_success": 2241.6,
+      "errors": []
+    },
+    "revised": {
+      "success_count": 30,
+      "case_count": 30,
+      "answer_pass_rate": 1.0,
+      "dimension_pass_rates": {
+        "action": 1.0,
+        "numeric": 1.0,
+        "citation": 1.0,
+        "as_of": 1.0,
+        "missing_information": 1.0
+      },
+      "unanswerable_count": 12,
+      "requests": 57,
+      "tool_calls": 27,
+      "prompt_tokens": 58779,
+      "completion_tokens": 2691,
+      "total_tokens": 61470,
+      "elapsed_ms_total": 55425.84,
+      "tokens_per_success": 2049.0,
+      "errors": []
+    }
+  },
+  "holdout": {
+    "questions": 5,
+    "repeats": 1,
+    "arms": {
+      "original": {
+        "success_count": 3,
+        "case_count": 5,
+        "answer_pass_rate": 0.6,
+        "dimension_pass_rates": {
+          "action": 1.0,
+          "numeric": 0.8,
+          "citation": 1.0,
+          "as_of": 1.0,
+          "missing_information": 0.8
+        },
+        "unanswerable_count": 2,
+        "requests": 9,
+        "tool_calls": 5,
+        "prompt_tokens": 12659,
+        "completion_tokens": 501,
+        "total_tokens": 13160,
+        "elapsed_ms_total": 9321.33,
+        "tokens_per_success": 4386.666666666667,
+        "errors": [
+          {
+            "case_id": "D16-11__run1",
+            "checks": {
+              "action": true,
+              "numeric": true,
+              "citation": true,
+              "as_of": true,
+              "missing_information": false
+            }
+          },
+          {
+            "case_id": "D16-14__run4",
+            "checks": {
+              "action": true,
+              "numeric": false,
+              "citation": true,
+              "as_of": true,
+              "missing_information": true
+            }
+          }
+        ],
+        "per_case": [
+          {
+            "case_id": "D16-11",
+            "status": "completed",
+            "prediction": {
+              "action": "insufficient_data",
+              "as_of": "2026-11-13",
+              "citations": [],
+              "missing_information": [
+                "next_dividend_payment_date",
+                "dividend_announcement"
+              ]
+            },
+            "tool_calls": 2,
+            "elapsed_ms": 2095.96,
+            "usage": {
+              "requests": 2,
+              "prompt_tokens": 7999,
+              "completion_tokens": 122,
+              "total_tokens": 8121
+            },
+            "unanswerable": true
+          },
+          {
+            "case_id": "D16-12",
+            "status": "completed",
+            "prediction": {
+              "action": "answer",
+              "as_of": "2026-11-13",
+              "citations": [
+                "2026-11-12",
+                "2026-11-13"
+              ],
+              "missing_information": [],
+              "change_percent": -3.06
+            },
+            "tool_calls": 1,
+            "elapsed_ms": 1730.92,
+            "usage": {
+              "requests": 2,
+              "prompt_tokens": 1360,
+              "completion_tokens": 95,
+              "total_tokens": 1455
+            },
+            "unanswerable": false
+          },
+          {
+            "case_id": "D16-13",
+            "status": "completed",
+            "prediction": {
+              "action": "answer",
+              "as_of": "2026-11-13",
+              "citations": [
+                "2026-11-12",
+                "2026-11-13"
+              ],
+              "change_percent": -3.06,
+              "missing_information": []
+            },
+            "tool_calls": 1,
+            "elapsed_ms": 1788.8,
+            "usage": {
+              "requests": 2,
+              "prompt_tokens": 1344,
+              "completion_tokens": 90,
+              "total_tokens": 1434
+            },
+            "unanswerable": false
+          },
+          {
+            "case_id": "D16-14",
+            "status": "completed",
+            "prediction": {
+              "action": "answer",
+              "as_of": "2026-11-13",
+              "citations": [
+                "2026-11-12",
+                "2026-11-13"
+              ],
+              "missing_information": [],
+              "change_percent": {
+                "2026-11-13": -3.06
+              },
+              "note": "2026-11-13 收盘 386.6，较 2026-11-12 收盘 398.8 下跌 3.06%；仅返回两日收盘价，无法计算 2026-11-12 相对前一日的涨跌幅"
+            },
+            "tool_calls": 1,
+            "elapsed_ms": 2223.02,
+            "usage": {
+              "requests": 2,
+              "prompt_tokens": 1340,
+              "completion_tokens": 157,
+              "total_tokens": 1497
+            },
+            "unanswerable": false
+          },
+          {
+            "case_id": "D16-15",
+            "status": "completed",
+            "prediction": {
+              "action": "insufficient_data",
+              "as_of": "2026-11-12",
+              "citations": [],
+              "missing_information": [
+                "前一交易日收盘价"
+              ]
+            },
+            "tool_calls": 0,
+            "elapsed_ms": 1482.63,
+            "usage": {
+              "requests": 1,
+              "prompt_tokens": 616,
+              "completion_tokens": 37,
+              "total_tokens": 653
+            },
+            "unanswerable": true
+          }
+        ]
+      },
+      "revised": {
+        "success_count": 2,
+        "case_count": 5,
+        "answer_pass_rate": 0.4,
+        "dimension_pass_rates": {
+          "action": 1.0,
+          "numeric": 0.6,
+          "citation": 1.0,
+          "as_of": 1.0,
+          "missing_information": 0.8
+        },
+        "unanswerable_count": 2,
+        "requests": 9,
+        "tool_calls": 5,
+        "prompt_tokens": 12812,
+        "completion_tokens": 551,
+        "total_tokens": 13363,
+        "elapsed_ms_total": 9035.88,
+        "tokens_per_success": 6681.5,
+        "errors": [
+          {
+            "case_id": "D16-11__run1",
+            "checks": {
+              "action": true,
+              "numeric": true,
+              "citation": true,
+              "as_of": true,
+              "missing_information": false
+            }
+          },
+          {
+            "case_id": "D16-13__run3",
+            "checks": {
+              "action": true,
+              "numeric": false,
+              "citation": true,
+              "as_of": true,
+              "missing_information": true
+            }
+          },
+          {
+            "case_id": "D16-14__run4",
+            "checks": {
+              "action": true,
+              "numeric": false,
+              "citation": true,
+              "as_of": true,
+              "missing_information": true
+            }
+          }
+        ],
+        "per_case": [
+          {
+            "case_id": "D16-11",
+            "status": "completed",
+            "prediction": {
+              "action": "insufficient_data",
+              "as_of": "2026-11-13",
+              "citations": [],
+              "missing_information": [
+                "next_dividend_payment_date",
+                "dividend_declaration_announcement"
+              ]
+            },
+            "tool_calls": 2,
+            "elapsed_ms": 1607.42,
+            "usage": {
+              "requests": 2,
+              "prompt_tokens": 8033,
+              "completion_tokens": 125,
+              "total_tokens": 8158
+            },
+            "unanswerable": true
+          },
+          {
+            "case_id": "D16-12",
+            "status": "completed",
+            "prediction": {
+              "action": "answer",
+              "as_of": "2026-11-13",
+              "citations": [
+                "2026-11-12",
+                "2026-11-13"
+              ],
+              "missing_information": [],
+              "change_percent": -3.06
+            },
+            "tool_calls": 1,
+            "elapsed_ms": 2322.92,
+            "usage": {
+              "requests": 2,
+              "prompt_tokens": 1394,
+              "completion_tokens": 95,
+              "total_tokens": 1489
+            },
+            "unanswerable": false
+          },
+          {
+            "case_id": "D16-13",
+            "status": "completed",
+            "prediction": {
+              "action": "answer",
+              "as_of": "2026-11-13",
+              "citations": [
+                "2026-11-12",
+                "2026-11-13"
+              ],
+              "change_percent": {
+                "2026-11-12": null,
+                "2026-11-13": -3.06
+              },
+              "missing_information": [
+                "2026-11-11_close"
+              ]
+            },
+            "tool_calls": 1,
+            "elapsed_ms": 2364.36,
+            "usage": {
+              "requests": 2,
+              "prompt_tokens": 1378,
+              "completion_tokens": 122,
+              "total_tokens": 1500
+            },
+            "unanswerable": false
+          },
+          {
+            "case_id": "D16-14",
+            "status": "completed",
+            "prediction": {
+              "action": "answer",
+              "as_of": "2026-11-13",
+              "citations": [
+                "2026-11-12",
+                "2026-11-13"
+              ],
+              "missing_information": [],
+              "change_percent": {
+                "2026-11-12": null,
+                "2026-11-13": -3.06
+              },
+              "note": "2026-11-13 收盘 386.6，较 2026-11-12 收盘 398.8 下跌 3.06%；2026-11-12 的涨跌幅需要 2026-11-11 的收盘价，但该数据缺失，因此无法计算。"
+            },
+            "tool_calls": 1,
+            "elapsed_ms": 1832.33,
+            "usage": {
+              "requests": 2,
+              "prompt_tokens": 1374,
+              "completion_tokens": 176,
+              "total_tokens": 1550
+            },
+            "unanswerable": false
+          },
+          {
+            "case_id": "D16-15",
+            "status": "completed",
+            "prediction": {
+              "action": "insufficient_data",
+              "as_of": "2026-11-12",
+              "citations": [],
+              "missing_information": [
+                "前一交易日收盘价"
+              ]
+            },
+            "tool_calls": 0,
+            "elapsed_ms": 908.85,
+            "usage": {
+              "requests": 1,
+              "prompt_tokens": 633,
+              "completion_tokens": 33,
+              "total_tokens": 666
+            },
+            "unanswerable": true
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+day21 case=OI-01 tool_calls=4 judge_swapped=yes
+day21 case=OI-02 tool_calls=4 judge_swapped=yes
+{
+  "report": "evals/runs/day21_1875249b26e047b4933a3f67a3105d0e.json",
+  "blind_packet": "evals/DAY21_BLIND_REVIEW.md",
+  "judge_summary": {
+    "answer_score_order_sensitivity_count": 1,
+    "pair_preference_flip_count": 1
+  }
+}

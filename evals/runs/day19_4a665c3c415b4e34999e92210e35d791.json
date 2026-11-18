@@ -1,0 +1,555 @@
+{
+  "run_id": "4a665c3c415b4e34999e92210e35d791",
+  "created_at": "2026-11-17T16:17:56.811312+08:00",
+  "model": "deepseek-flash",
+  "snapshot": {
+    "prices": "evals/fixtures/day15_prices.json",
+    "filings": "fixtures/filings.json"
+  },
+  "case_ids": [
+    "D16-01",
+    "D16-02",
+    "D16-03",
+    "D16-04",
+    "D16-05",
+    "D16-06",
+    "D16-07",
+    "D16-08",
+    "D16-09",
+    "D16-10"
+  ],
+  "arms": {
+    "baseline": {
+      "success_count": 10,
+      "case_count": 10,
+      "answer_pass_rate": 1.0,
+      "dimension_pass_rates": {
+        "action": 1.0,
+        "numeric": 1.0,
+        "citation": 1.0,
+        "as_of": 1.0,
+        "missing_information": 1.0
+      },
+      "unanswerable_count": 4,
+      "tool_calls": 0,
+      "requests": 10,
+      "prompt_tokens": 68932,
+      "completion_tokens": 512,
+      "total_tokens": 69444,
+      "elapsed_ms_total": 12814.3,
+      "per_case": [
+        {
+          "case_id": "D16-01",
+          "status": "completed",
+          "prediction": {
+            "action": "answer",
+            "as_of": "2026-11-13",
+            "citations": [
+              "2026-11-12",
+              "2026-11-13"
+            ],
+            "missing_information": [],
+            "change_percent": -3.0591775325978
+          },
+          "tool_calls": 0,
+          "fixed_data_calls": 2,
+          "elapsed_ms": 1219.86,
+          "usage": {
+            "requests": 1,
+            "prompt_tokens": 6902,
+            "completion_tokens": 58,
+            "total_tokens": 6960
+          },
+          "unanswerable": false
+        },
+        {
+          "case_id": "D16-02",
+          "status": "completed",
+          "prediction": {
+            "action": "insufficient_data",
+            "as_of": "2026-11-12",
+            "citations": [
+              "2026-11-12"
+            ],
+            "missing_information": [
+              "前一交易日收盘价"
+            ]
+          },
+          "tool_calls": 0,
+          "fixed_data_calls": 2,
+          "elapsed_ms": 1227.6,
+          "usage": {
+            "requests": 1,
+            "prompt_tokens": 6861,
+            "completion_tokens": 44,
+            "total_tokens": 6905
+          },
+          "unanswerable": true
+        },
+        {
+          "case_id": "D16-03",
+          "status": "completed",
+          "prediction": {
+            "action": "reject_future_data",
+            "as_of": "2026-11-13",
+            "citations": [],
+            "missing_information": [
+              "2026-11-16 收盘价"
+            ]
+          },
+          "tool_calls": 0,
+          "fixed_data_calls": 2,
+          "elapsed_ms": 1316.14,
+          "usage": {
+            "requests": 1,
+            "prompt_tokens": 6905,
+            "completion_tokens": 44,
+            "total_tokens": 6949
+          },
+          "unanswerable": false
+        },
+        {
+          "case_id": "D16-04",
+          "status": "completed",
+          "prediction": {
+            "action": "answer",
+            "as_of": "2026-11-13",
+            "citations": [
+              "2026-11-12",
+              "2026-11-13"
+            ],
+            "missing_information": [],
+            "2026-11-12": 398.8,
+            "2026-11-13": 386.6
+          },
+          "tool_calls": 0,
+          "fixed_data_calls": 2,
+          "elapsed_ms": 1301.93,
+          "usage": {
+            "requests": 1,
+            "prompt_tokens": 6911,
+            "completion_tokens": 70,
+            "total_tokens": 6981
+          },
+          "unanswerable": false
+        },
+        {
+          "case_id": "D16-05",
+          "status": "completed",
+          "prediction": {
+            "action": "answer",
+            "as_of": "2026-11-12",
+            "citations": [
+              "2026-11-12"
+            ],
+            "missing_information": [],
+            "2026-11-12": 398.8
+          },
+          "tool_calls": 0,
+          "fixed_data_calls": 2,
+          "elapsed_ms": 1336.16,
+          "usage": {
+            "requests": 1,
+            "prompt_tokens": 6864,
+            "completion_tokens": 49,
+            "total_tokens": 6913
+          },
+          "unanswerable": false
+        },
+        {
+          "case_id": "D16-06",
+          "status": "completed",
+          "prediction": {
+            "action": "answer",
+            "as_of": "2026-11-13",
+            "citations": [
+              "2026-11-13"
+            ],
+            "missing_information": [],
+            "2026-11-13": 386.6
+          },
+          "tool_calls": 0,
+          "fixed_data_calls": 2,
+          "elapsed_ms": 1213.17,
+          "usage": {
+            "requests": 1,
+            "prompt_tokens": 6904,
+            "completion_tokens": 49,
+            "total_tokens": 6953
+          },
+          "unanswerable": false
+        },
+        {
+          "case_id": "D16-07",
+          "status": "completed",
+          "prediction": {
+            "action": "answer",
+            "as_of": "2026-11-13",
+            "citations": [
+              "2026-11-12",
+              "2026-11-13"
+            ],
+            "missing_information": [],
+            "absolute_price_difference": 12.2
+          },
+          "tool_calls": 0,
+          "fixed_data_calls": 2,
+          "elapsed_ms": 1297.57,
+          "usage": {
+            "requests": 1,
+            "prompt_tokens": 6905,
+            "completion_tokens": 55,
+            "total_tokens": 6960
+          },
+          "unanswerable": false
+        },
+        {
+          "case_id": "D16-08",
+          "status": "completed",
+          "prediction": {
+            "action": "insufficient_data",
+            "as_of": "2026-11-13",
+            "citations": [
+              "2026-11-12",
+              "2026-11-13"
+            ],
+            "missing_information": [
+              "volume"
+            ]
+          },
+          "tool_calls": 0,
+          "fixed_data_calls": 2,
+          "elapsed_ms": 1039.98,
+          "usage": {
+            "requests": 1,
+            "prompt_tokens": 6896,
+            "completion_tokens": 49,
+            "total_tokens": 6945
+          },
+          "unanswerable": true
+        },
+        {
+          "case_id": "D16-09",
+          "status": "completed",
+          "prediction": {
+            "action": "insufficient_data",
+            "as_of": "2026-11-13",
+            "citations": [
+              "2026-11-13",
+              "2026-11-12"
+            ],
+            "missing_information": [
+              "市盈率",
+              "每股收益"
+            ]
+          },
+          "tool_calls": 0,
+          "fixed_data_calls": 2,
+          "elapsed_ms": 1438.16,
+          "usage": {
+            "requests": 1,
+            "prompt_tokens": 6892,
+            "completion_tokens": 54,
+            "total_tokens": 6946
+          },
+          "unanswerable": true
+        },
+        {
+          "case_id": "D16-10",
+          "status": "completed",
+          "prediction": {
+            "action": "insufficient_data",
+            "as_of": "2026-11-13",
+            "citations": [],
+            "missing_information": [
+              "2026-11-13公告"
+            ]
+          },
+          "tool_calls": 0,
+          "fixed_data_calls": 2,
+          "elapsed_ms": 1423.73,
+          "usage": {
+            "requests": 1,
+            "prompt_tokens": 6892,
+            "completion_tokens": 40,
+            "total_tokens": 6932
+          },
+          "unanswerable": true
+        }
+      ]
+    },
+    "tool_loop": {
+      "success_count": 10,
+      "case_count": 10,
+      "answer_pass_rate": 1.0,
+      "dimension_pass_rates": {
+        "action": 1.0,
+        "numeric": 1.0,
+        "citation": 1.0,
+        "as_of": 1.0,
+        "missing_information": 1.0
+      },
+      "unanswerable_count": 4,
+      "tool_calls": 9,
+      "requests": 19,
+      "prompt_tokens": 19270,
+      "completion_tokens": 911,
+      "total_tokens": 20181,
+      "elapsed_ms_total": 19808.5,
+      "per_case": [
+        {
+          "case_id": "D16-01",
+          "status": "completed",
+          "prediction": {
+            "action": "answer",
+            "as_of": "2026-11-13",
+            "citations": [
+              "2026-11-12",
+              "2026-11-13"
+            ],
+            "missing_information": [],
+            "change_percent": -3.06,
+            "2026-11-12": 398.8,
+            "2026-11-13": 386.6
+          },
+          "tool_calls": 1,
+          "fixed_data_calls": null,
+          "elapsed_ms": 2444.2,
+          "usage": {
+            "requests": 2,
+            "prompt_tokens": 1358,
+            "completion_tokens": 121,
+            "total_tokens": 1479
+          },
+          "unanswerable": false
+        },
+        {
+          "case_id": "D16-02",
+          "status": "completed",
+          "prediction": {
+            "action": "insufficient_data",
+            "as_of": "2026-11-12",
+            "citations": [
+              "2026-11-12"
+            ],
+            "missing_information": [
+              "前一交易日收盘价"
+            ]
+          },
+          "tool_calls": 1,
+          "fixed_data_calls": null,
+          "elapsed_ms": 2123.91,
+          "usage": {
+            "requests": 2,
+            "prompt_tokens": 1313,
+            "completion_tokens": 81,
+            "total_tokens": 1394
+          },
+          "unanswerable": true
+        },
+        {
+          "case_id": "D16-03",
+          "status": "completed",
+          "prediction": {
+            "action": "reject_future_data",
+            "as_of": "2026-11-13",
+            "citations": [],
+            "missing_information": [
+              "2026-11-16 收盘价"
+            ]
+          },
+          "tool_calls": 0,
+          "fixed_data_calls": null,
+          "elapsed_ms": 1084.29,
+          "usage": {
+            "requests": 1,
+            "prompt_tokens": 618,
+            "completion_tokens": 44,
+            "total_tokens": 662
+          },
+          "unanswerable": false
+        },
+        {
+          "case_id": "D16-04",
+          "status": "completed",
+          "prediction": {
+            "action": "answer",
+            "as_of": "2026-11-13",
+            "citations": [
+              "2026-11-12",
+              "2026-11-13"
+            ],
+            "missing_information": [],
+            "close": {
+              "2026-11-12": 398.8,
+              "2026-11-13": 386.6
+            },
+            "change_percent": -3.06
+          },
+          "tool_calls": 1,
+          "fixed_data_calls": null,
+          "elapsed_ms": 2079.97,
+          "usage": {
+            "requests": 2,
+            "prompt_tokens": 1376,
+            "completion_tokens": 115,
+            "total_tokens": 1491
+          },
+          "unanswerable": false
+        },
+        {
+          "case_id": "D16-05",
+          "status": "completed",
+          "prediction": {
+            "action": "answer",
+            "as_of": "2026-11-12",
+            "citations": [
+              "2026-11-12"
+            ],
+            "missing_information": [],
+            "2026-11-12": 398.8
+          },
+          "tool_calls": 1,
+          "fixed_data_calls": null,
+          "elapsed_ms": 2020.38,
+          "usage": {
+            "requests": 2,
+            "prompt_tokens": 1319,
+            "completion_tokens": 90,
+            "total_tokens": 1409
+          },
+          "unanswerable": false
+        },
+        {
+          "case_id": "D16-06",
+          "status": "completed",
+          "prediction": {
+            "action": "answer",
+            "as_of": "2026-11-13",
+            "citations": [
+              "2026-11-13"
+            ],
+            "missing_information": [],
+            "close": {
+              "2026-11-13": 386.6
+            }
+          },
+          "tool_calls": 1,
+          "fixed_data_calls": null,
+          "elapsed_ms": 2137.82,
+          "usage": {
+            "requests": 2,
+            "prompt_tokens": 1362,
+            "completion_tokens": 93,
+            "total_tokens": 1455
+          },
+          "unanswerable": false
+        },
+        {
+          "case_id": "D16-07",
+          "status": "completed",
+          "prediction": {
+            "action": "answer",
+            "as_of": "2026-11-13",
+            "citations": [
+              "2026-11-12",
+              "2026-11-13"
+            ],
+            "missing_information": [],
+            "absolute_price_difference": 12.2,
+            "change_percent": -3.0592
+          },
+          "tool_calls": 1,
+          "fixed_data_calls": null,
+          "elapsed_ms": 2345.34,
+          "usage": {
+            "requests": 2,
+            "prompt_tokens": 1364,
+            "completion_tokens": 107,
+            "total_tokens": 1471
+          },
+          "unanswerable": false
+        },
+        {
+          "case_id": "D16-08",
+          "status": "completed",
+          "prediction": {
+            "action": "insufficient_data",
+            "as_of": "2026-11-13",
+            "citations": [
+              "2026-11-12",
+              "2026-11-13"
+            ],
+            "missing_information": [
+              "volume"
+            ]
+          },
+          "tool_calls": 1,
+          "fixed_data_calls": null,
+          "elapsed_ms": 1740.35,
+          "usage": {
+            "requests": 2,
+            "prompt_tokens": 1346,
+            "completion_tokens": 90,
+            "total_tokens": 1436
+          },
+          "unanswerable": true
+        },
+        {
+          "case_id": "D16-09",
+          "status": "completed",
+          "prediction": {
+            "action": "insufficient_data",
+            "as_of": "2026-11-13",
+            "citations": [
+              "2026-11-13"
+            ],
+            "missing_information": [
+              "市盈率",
+              "每股收益"
+            ]
+          },
+          "tool_calls": 1,
+          "fixed_data_calls": null,
+          "elapsed_ms": 1839.33,
+          "usage": {
+            "requests": 2,
+            "prompt_tokens": 1338,
+            "completion_tokens": 87,
+            "total_tokens": 1425
+          },
+          "unanswerable": true
+        },
+        {
+          "case_id": "D16-10",
+          "status": "completed",
+          "prediction": {
+            "action": "insufficient_data",
+            "as_of": "2026-11-13",
+            "citations": [],
+            "missing_information": [
+              "2026-11-13 公告"
+            ]
+          },
+          "tool_calls": 1,
+          "fixed_data_calls": null,
+          "elapsed_ms": 1992.91,
+          "usage": {
+            "requests": 2,
+            "prompt_tokens": 7876,
+            "completion_tokens": 83,
+            "total_tokens": 7959
+          },
+          "unanswerable": true
+        }
+      ]
+    }
+  },
+  "caveats": [
+    "该实验使用冻结本地数据，不调用 Futu OpenD。",
+    "fixed_data_calls 是固定工作流读取的两个数据源数；tool_calls 是 Agent 实际请求并执行的工具数。",
+    "无法回答计数由模型 action=insufficient_data 标记；是否恰当由研究题答案评分一并核对。",
+    "模型耗时含网络延迟；单次配对且小样本，不足以作统计显著性结论。"
+  ],
+  "scoring_revision": "D18 scorer accepts nested dated close values, common volume labels, and extra correctly answerable fields."
+}
