@@ -1,0 +1,76 @@
+{
+  "snapshot_id": "day22_filings_snapshot",
+  "n": 5,
+  "notes": "五题均可由入库原文直接回答。覆盖腾讯两个报告期；第 5 题取腾讯音乐同期收入，指标名称与腾讯控股第 1 题相近，公司名称也相近，供后续 RAG 周次测试干扰。数字均摘自已抽取的 PDF 文本，未经推算改写。",
+  "questions": [
+    {
+      "id": "D22-Q1",
+      "question": "腾讯控股截至二零二五年十二月三十一日止年度的收入是多少？",
+      "answer": "人民币 751,766 百万元，较二零二四年的人民币 660,257 百万元同比上升 14%。",
+      "document_id": "tencent_hk00700_2025_annual_results",
+      "evidence_pages": [
+        2
+      ],
+      "period": "year ended 31 December 2025",
+      "units": "人民币百万元",
+      "quote": "收入                           751,766    660,257     14%",
+      "quote_units_line": "（人民幣百萬元，另有指明者除外）",
+      "interference_risk": "可与腾讯音乐 2025 年全年收入人民币 32,902 百万元（D22-Q5）混淆。"
+    },
+    {
+      "id": "D22-Q2",
+      "question": "腾讯控股董事会建议就截至二零二五年十二月三十一日止年度派发的末期股息是每股多少？",
+      "answer": "每股 5.30 港元（二零二四年：每股 4.50 港元），须待股东在二零二六年股东周年大会上批准后方可作实。",
+      "document_id": "tencent_hk00700_2025_annual_results",
+      "evidence_pages": [
+        3
+      ],
+      "period": "year ended 31 December 2025",
+      "units": "港元/股",
+      "quote": "董事會建議就截至二零二五年十二月三十一日止年度派發末期股息每股 5.30 港元"
+    },
+    {
+      "id": "D22-Q3",
+      "question": "腾讯控股截至二零二六年六月三十日止六个月的收入是多少？",
+      "answer": "RMB 401,243 million，较二零二五年同期的 RMB 364,526 million 同比上升 10%。",
+      "document_id": "tencent_hk00700_2026_interim_results",
+      "evidence_pages": [
+        2
+      ],
+      "period": "six months ended 30 June 2026",
+      "units": "RMB million",
+      "quote": "Revenues                                                   401,243          364,526              10%",
+      "quote_units_line": "(RMB in millions, unless specified)",
+      "language_note": "本题证据取自英文官方 PDF，因未找到对应中文官方 PDF。"
+    },
+    {
+      "id": "D22-Q4",
+      "question": "截至二零二六年六月三十日，腾讯控股微信及 WeChat 的合并月活跃账户数是多少？",
+      "answer": "1,439 million，较二零二五年六月三十日的 1,411 million 同比上升 2%。",
+      "document_id": "tencent_hk00700_2026_interim_results",
+      "evidence_pages": [
+        3
+      ],
+      "period": "as at 30 June 2026",
+      "units": "million accounts",
+      "quote": "Combined MAU of Weixin\n  and WeChat                              1,439           1,411             2%            1,432         0.5%",
+      "quote_units_line": "(in millions, unless specified)",
+      "language_note": "本题证据取自英文官方 PDF。"
+    },
+    {
+      "id": "D22-Q5",
+      "question": "腾讯音乐娱乐集团截至 2025 年 12 月 31 日止年度的收入是多少？",
+      "answer": "人民币 32,902 百万元（美元 4,705 百万元，未经审计）。业绩亮点中表述为人民币 329.0 亿元（47.1 亿美元），同比增长 15.8%，与合并损益表数字一致（四舍五入）。",
+      "document_id": "tme_hk01698_2025_annual_results",
+      "evidence_pages": [
+        3,
+        13
+      ],
+      "period": "year ended 31 December 2025",
+      "units": "人民币百万元",
+      "quote_highlight": "總 收 入 為 人 民 幣 329.0 億 元（47.1 億 美 元），同 比 增 長 15.8% 。",
+      "quote_income_statement": "在線音樂服務收入 … 26,726 … 社交娛樂服務及其他服務收入 … 6,176 … 合计栏 2025 年全年人民币 32,902、美元 4,705（单位：百万元，第 13 页合并损益表）。",
+      "interference_risk": "公司名称与腾讯控股相近，指标同为全年「收入/总收入」。腾讯控股同期收入为人民币 751,766 百万元（D22-Q1）。两家公司的「本公司权益持有人应占盈利/净利润」名称也相近（腾讯控股 224,842 百万元，腾讯音乐 11,056 百万元），同样构成潜在干扰。"
+    }
+  ]
+}
