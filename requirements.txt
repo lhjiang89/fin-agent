@@ -3,3 +3,4 @@ pydantic==2.13.5
 pytest==8.4.2
 openai==2.11.0
 langgraph==0.2.76
+pymupdf==1.26.5

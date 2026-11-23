@@ -1,0 +1,695 @@
+{
+  "run_id": "day24_keyword_baseline",
+  "created_at": "2026-11-20T01:05:01Z",
+  "as_of": "2026-11-19",
+  "allowed_symbols": [
+    "HK.00700",
+    "HK.01698"
+  ],
+  "note": "Symbol and as-of filters run before keyword ranking. document_id is not passed to mimic routing uncertainty within one issuer.",
+  "questions": [
+    {
+      "question_id": "D22-Q1",
+      "gold_document_id": "tencent_hk00700_2025_annual_results",
+      "gold_evidence_pages": [
+        2
+      ],
+      "symbol_resolved": "HK.00700",
+      "retrieval": "keyword_retrieval.v1",
+      "question": "腾讯控股截至二零二五年十二月三十一日止年度的收入是多少？",
+      "filters": {
+        "as_of": "2026-11-19",
+        "symbol": "HK.00700",
+        "allowed_symbols": [
+          "HK.00700",
+          "HK.01698"
+        ],
+        "document_id": null
+      },
+      "filter_stats": {
+        "input_chunks": 772,
+        "rejected_permission": 0,
+        "rejected_symbol": 96,
+        "rejected_document_id": 0,
+        "rejected_as_of": 0,
+        "kept": 676
+      },
+      "query_terms": [
+        "腾讯控股",
+        "二零二五年十二月三十一日止年度的收入是多少",
+        "止年度",
+        "腾讯控股截至二零二五年十二月三十一日",
+        "的收入是多少",
+        "十二月三十一日",
+        "腾讯控股截至二零二五年",
+        "止年度的收入是多少",
+        "收入",
+        "腾讯控股截至二零二五年十二月三十一日止年度的",
+        "是多少",
+        "截至二零二五年十二月三十一日止年度的收入是多少"
+      ],
+      "candidate_chunks": 676,
+      "top_k": 5,
+      "results": [
+        {
+          "rank": 1,
+          "chunk_id": "tencent_hk00700_2025_annual_results:p007:c003",
+          "score": 49.2424,
+          "matched_terms": [
+            "腾讯控股",
+            "止年度",
+            "十二月三十一日",
+            "收入"
+          ],
+          "page": 7,
+          "anchor": "pdf page 7, bbox [70.9, 377.9, 524.4, 533.3]",
+          "document_id": "tencent_hk00700_2025_annual_results",
+          "symbol": "HK.00700",
+          "kind": "paragraph",
+          "rank_reason": "matched 4/12 query terms with weights 腾讯控股, 止年度, 十二月三十一日, 收入",
+          "text_preview": "－ 增值服務業務截至二零二五年十二月三十一日止年度的收入同比增長16% 至人民幣3,693 億元。本土市場遊戲收入為人民幣1,642 億元，同比增長18%，得益於近期發佈的《三角洲行動》的強勁表現，以及《王者榮耀》、《和平精英》等長青遊戲及《無畏契約》系列（個人電腦端及移動端）的收入增長。國際市場遊戲收入為人民幣774 億元，同比增長33%（按固定匯率計算為32%），得益於Supercell旗下遊戲及《PUBG MOBILE》的收入增長"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "tencent_hk00700_2025_annual_results:p011:c003",
+          "score": 41.2328,
+          "matched_terms": [
+            "腾讯控股",
+            "止年度",
+            "十二月三十一日",
+            "收入"
+          ],
+          "page": 11,
+          "anchor": "pdf page 11, bbox [70.9, 417.9, 524.4, 553.3]",
+          "document_id": "tencent_hk00700_2025_annual_results",
+          "symbol": "HK.00700",
+          "kind": "paragraph",
+          "rank_reason": "matched 4/12 query terms with weights 腾讯控股, 止年度, 十二月三十一日, 收入",
+          "text_preview": "－ 增值服務業務二零二五年第四季的收入同比增長14% 至人民幣899 億元。本土市場遊戲收入為人民幣382 億元，同比增長15%，得益於《三角洲行動》與《無畏契約》系列（個人電腦端及移動端）的收入增長，以及《鳴潮》的增量收入貢獻。國際市場遊戲收入為人民幣211 億元，同比增長32%（按固定匯率計算為31%），主要得益於Supercell 旗下遊戲及《PUBG MOBILE》的收入增長，以及《鳴潮》的增量收入貢獻。社交網絡收入同比增長3%"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "tencent_hk00700_2025_annual_results:p008:c001",
+          "score": 34.4862,
+          "matched_terms": [
+            "腾讯控股",
+            "止年度",
+            "十二月三十一日",
+            "收入"
+          ],
+          "page": 8,
+          "anchor": "pdf page 8, bbox [70.9, 57.4, 530.4, 152.8]",
+          "document_id": "tencent_hk00700_2025_annual_results",
+          "symbol": "HK.00700",
+          "kind": "paragraph",
+          "rank_reason": "matched 4/12 query terms with weights 腾讯控股, 止年度, 十二月三十一日, 收入",
+          "text_preview": "－ 金融科技及企業服務業務截至二零二五年十二月三十一日止年度的收入同比增長8% 至人民幣2,294 億元。金融科技服務收入同比以高個位數百分比增長，乃由於理財服務、消費貸款服務及商業支付活動的收入增加。企業服務收入同比增長接近20%，得益於國內及海外對雲服務的需求（包括對AI 相關服務的需求）增加，以及由於微信小店交易額上升而帶動的商家技術服務費收入增長。"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "tencent_hk00700_2025_annual_results:p025:c001",
+          "score": 33.7931,
+          "matched_terms": [
+            "腾讯控股",
+            "止年度",
+            "十二月三十一日",
+            "收入"
+          ],
+          "page": 25,
+          "anchor": "pdf page 25, bbox [70.9, 56.7, 528.4, 724.9]",
+          "document_id": "tencent_hk00700_2025_annual_results",
+          "symbol": "HK.00700",
+          "kind": "table",
+          "rank_reason": "matched 4/12 query terms with weights 腾讯控股, 止年度, 十二月三十一日, 收入",
+          "text_preview": "財務資料 / 綜合收益表 / 截至二零二五年十二月三十一日止年度 / 截至十二月三十一日止年度 / 二零二五年 | 二零二四年 / 附註 | 人民幣百萬元 | 人民幣百萬元 / 收入 / 增值服務 | 369,281 | 319,168 / 營銷服務 | 144,973 | 121,374 / 金融科技及企業服務 | 229,435 | 211,956 / 其他 | 8,077 | 7,759 / 2 | 751,766 | 660,257 / 收入成本 | 3 | (329,173"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "tencent_hk00700_2025_annual_results:p007:c001",
+          "score": 30.4506,
+          "matched_terms": [
+            "腾讯控股",
+            "止年度",
+            "十二月三十一日",
+            "收入"
+          ],
+          "page": 7,
+          "anchor": "pdf page 7, bbox [69.0, 57.4, 524.5, 112.8]",
+          "document_id": "tencent_hk00700_2025_annual_results",
+          "symbol": "HK.00700",
+          "kind": "paragraph",
+          "rank_reason": "matched 4/12 query terms with weights 腾讯控股, 止年度, 十二月三十一日, 收入",
+          "text_preview": "收入。截至二零二五年十二月三十一日止年度的收入同比增長14% 至人民幣7,518億元。下表載列本集團截至二零二五年及二零二四年十二月三十一日止年度按分部劃分的收入。"
+        }
+      ]
+    },
+    {
+      "question_id": "D22-Q2",
+      "gold_document_id": "tencent_hk00700_2025_annual_results",
+      "gold_evidence_pages": [
+        3
+      ],
+      "symbol_resolved": "HK.00700",
+      "retrieval": "keyword_retrieval.v1",
+      "question": "腾讯控股董事会建议就截至二零二五年十二月三十一日止年度派发的末期股息是每股多少？",
+      "filters": {
+        "as_of": "2026-11-19",
+        "symbol": "HK.00700",
+        "allowed_symbols": [
+          "HK.00700",
+          "HK.01698"
+        ],
+        "document_id": null
+      },
+      "filter_stats": {
+        "input_chunks": 772,
+        "rejected_permission": 0,
+        "rejected_symbol": 96,
+        "rejected_document_id": 0,
+        "rejected_as_of": 0,
+        "kept": 676
+      },
+      "query_terms": [
+        "腾讯控股董事会建议就",
+        "止年度",
+        "腾讯控股董事会建议就截至二零二五年十二月三十一日",
+        "派发的末期股息是每股多少",
+        "十二月三十一日",
+        "腾讯控股董事会建议就截至二零二五年",
+        "止年度派发的末期股息是每股多少",
+        "股息",
+        "是每股多少",
+        "末期股息",
+        "腾讯控股"
+      ],
+      "candidate_chunks": 676,
+      "top_k": 5,
+      "results": [
+        {
+          "rank": 1,
+          "chunk_id": "tencent_hk00700_2025_annual_results:p051:c005",
+          "score": 39.0548,
+          "matched_terms": [
+            "止年度",
+            "十二月三十一日",
+            "股息",
+            "末期股息",
+            "腾讯控股"
+          ],
+          "page": 51,
+          "anchor": "pdf page 51, bbox [70.9, 350.4, 524.3, 423.1]",
+          "document_id": "tencent_hk00700_2025_annual_results",
+          "symbol": "HK.00700",
+          "kind": "paragraph",
+          "rank_reason": "matched 5/11 query terms with weights 止年度, 十二月三十一日, 股息, 末期股息, 腾讯控股",
+          "text_preview": "(b) 符合資格收取建議末期股息 / 為釐定股東收取建議末期股息之資格，本公司將於以下所載日期暫停辦理股份過戶登記手續："
+        },
+        {
+          "rank": 2,
+          "chunk_id": "tencent_hk00700_2025_annual_results:p003:c001",
+          "score": 36.6515,
+          "matched_terms": [
+            "止年度",
+            "十二月三十一日",
+            "股息",
+            "末期股息",
+            "腾讯控股"
+          ],
+          "page": 3,
+          "anchor": "pdf page 3, bbox [64.9, 56.7, 524.4, 174.6]",
+          "document_id": "tencent_hk00700_2025_annual_results",
+          "symbol": "HK.00700",
+          "kind": "paragraph",
+          "rank_reason": "matched 5/11 query terms with weights 止年度, 十二月三十一日, 股息, 末期股息, 腾讯控股",
+          "text_preview": "股息 / 董事會建議就截至二零二五年十二月三十一日止年度派發末期股息每股5.30 港元（二零二四年：每股4.50 港元），惟須待股東在二零二六年股東週年大會上批准後，方可作實。該等建議股息預期將於二零二六年六月一日派發予於二零二六年五月二十日名列本公司股東名冊的股東。"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "tencent_hk00700_2025_annual_results:p039:c008",
+          "score": 31.9671,
+          "matched_terms": [
+            "止年度",
+            "十二月三十一日",
+            "股息",
+            "末期股息",
+            "腾讯控股"
+          ],
+          "page": 39,
+          "anchor": "pdf page 39, bbox [88.5, 695.5, 524.5, 744.4]",
+          "document_id": "tencent_hk00700_2025_annual_results",
+          "symbol": "HK.00700",
+          "kind": "paragraph",
+          "rank_reason": "matched 5/11 query terms with weights 止年度, 十二月三十一日, 股息, 末期股息, 腾讯控股",
+          "text_preview": "根據董事會於二零二六年三月十八日通過並須於二零二六年股東週年大會上經股東批准的一項決議案，建議派發截至二零二五年十二月三十一日止年度的末期股息每股5.30 港元（二零二四年：每股4.50 港元）。此擬派股息並未於該等綜合財務報表的應付股息中反映。"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "tencent_hk00700_2025_annual_results:p051:c010",
+          "score": 29.1553,
+          "matched_terms": [
+            "止年度",
+            "十二月三十一日",
+            "股息",
+            "末期股息",
+            "腾讯控股"
+          ],
+          "page": 51,
+          "anchor": "pdf page 51, bbox [70.9, 635.2, 524.5, 726.6]",
+          "document_id": "tencent_hk00700_2025_annual_results",
+          "symbol": "HK.00700",
+          "kind": "paragraph",
+          "rank_reason": "matched 5/11 query terms with weights 止年度, 十二月三十一日, 股息, 末期股息, 腾讯控股",
+          "text_preview": "於上述暫停辦理手續期間，任何股份過戶將不予登記。為符合資格出席二零二六年股東週年大會並於會上投票以及符合資格收取建議末期股息，最遲須於上述之最後時限前將所有正式填妥的過戶表格連同有關股票送達本公司的股份過戶登記分處香港中央證券登記有限公司辦理登記手續，地址為香港灣仔皇后大道東183號合和中心17 樓1712-1716 號舖。"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "tencent_hk00700_2025_annual_results:p026:c001",
+          "score": 26.0685,
+          "matched_terms": [
+            "止年度",
+            "十二月三十一日",
+            "腾讯控股"
+          ],
+          "page": 26,
+          "anchor": "pdf page 26, bbox [70.9, 56.7, 524.4, 200.6]",
+          "document_id": "tencent_hk00700_2025_annual_results",
+          "symbol": "HK.00700",
+          "kind": "table",
+          "rank_reason": "matched 3/11 query terms with weights 止年度, 十二月三十一日, 腾讯控股",
+          "text_preview": "綜合全面收益表 / 截至二零二五年十二月三十一日止年度 / 截至十二月三十一日止年度 / 二零二五年 | 二零二四年 / 人民幣百萬元 | 人民幣百萬元 / 年度盈利 | 229,801 | 196,467"
+        }
+      ]
+    },
+    {
+      "question_id": "D22-Q3",
+      "gold_document_id": "tencent_hk00700_2026_interim_results",
+      "gold_evidence_pages": [
+        2
+      ],
+      "symbol_resolved": "HK.00700",
+      "retrieval": "keyword_retrieval.v1",
+      "question": "腾讯控股截至二零二六年六月三十日止六个月的收入是多少？",
+      "filters": {
+        "as_of": "2026-11-19",
+        "symbol": "HK.00700",
+        "allowed_symbols": [
+          "HK.00700",
+          "HK.01698"
+        ],
+        "document_id": null
+      },
+      "filter_stats": {
+        "input_chunks": 772,
+        "rejected_permission": 0,
+        "rejected_symbol": 96,
+        "rejected_document_id": 0,
+        "rejected_as_of": 0,
+        "kept": 676
+      },
+      "query_terms": [
+        "腾讯控股",
+        "二零二六年六月三十日止六个月的收入是多少",
+        "止六个月",
+        "腾讯控股截至二零二六年六月三十日",
+        "的收入是多少",
+        "六月三十日",
+        "腾讯控股截至二零二六年",
+        "止六个月的收入是多少",
+        "收入",
+        "腾讯控股截至二零二六年六月三十日止六个月的",
+        "是多少",
+        "截至二零二六年六月三十日止六个月的收入是多少"
+      ],
+      "candidate_chunks": 676,
+      "top_k": 5,
+      "results": [
+        {
+          "rank": 1,
+          "chunk_id": "tencent_hk00700_2025_annual_results:p011:c003",
+          "score": 37.8903,
+          "matched_terms": [
+            "腾讯控股",
+            "收入"
+          ],
+          "page": 11,
+          "anchor": "pdf page 11, bbox [70.9, 417.9, 524.4, 553.3]",
+          "document_id": "tencent_hk00700_2025_annual_results",
+          "symbol": "HK.00700",
+          "kind": "paragraph",
+          "rank_reason": "matched 2/12 query terms with weights 腾讯控股, 收入",
+          "text_preview": "－ 增值服務業務二零二五年第四季的收入同比增長14% 至人民幣899 億元。本土市場遊戲收入為人民幣382 億元，同比增長15%，得益於《三角洲行動》與《無畏契約》系列（個人電腦端及移動端）的收入增長，以及《鳴潮》的增量收入貢獻。國際市場遊戲收入為人民幣211 億元，同比增長32%（按固定匯率計算為31%），主要得益於Supercell 旗下遊戲及《PUBG MOBILE》的收入增長，以及《鳴潮》的增量收入貢獻。社交網絡收入同比增長3%"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "tencent_hk00700_2025_annual_results:p007:c003",
+          "score": 34.2013,
+          "matched_terms": [
+            "腾讯控股",
+            "收入"
+          ],
+          "page": 7,
+          "anchor": "pdf page 7, bbox [70.9, 377.9, 524.4, 533.3]",
+          "document_id": "tencent_hk00700_2025_annual_results",
+          "symbol": "HK.00700",
+          "kind": "paragraph",
+          "rank_reason": "matched 2/12 query terms with weights 腾讯控股, 收入",
+          "text_preview": "－ 增值服務業務截至二零二五年十二月三十一日止年度的收入同比增長16% 至人民幣3,693 億元。本土市場遊戲收入為人民幣1,642 億元，同比增長18%，得益於近期發佈的《三角洲行動》的強勁表現，以及《王者榮耀》、《和平精英》等長青遊戲及《無畏契約》系列（個人電腦端及移動端）的收入增長。國際市場遊戲收入為人民幣774 億元，同比增長33%（按固定匯率計算為32%），得益於Supercell旗下遊戲及《PUBG MOBILE》的收入增長"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "tencent_hk00700_2025_annual_results:p012:c001",
+          "score": 26.8232,
+          "matched_terms": [
+            "腾讯控股",
+            "收入"
+          ],
+          "page": 12,
+          "anchor": "pdf page 12, bbox [70.9, 57.4, 524.5, 152.8]",
+          "document_id": "tencent_hk00700_2025_annual_results",
+          "symbol": "HK.00700",
+          "kind": "paragraph",
+          "rank_reason": "matched 2/12 query terms with weights 腾讯控股, 收入",
+          "text_preview": "－ 金融科技及企業服務業務二零二五年第四季的收入同比增長8% 至人民幣608 億元。金融科技服務收入增長主要由於理財服務及商業支付活動的收入增加。企業服務收入同比增速提升至22%，得益於國內及海外市場雲服務的收入增加（包括AI 相關服務的收入），以及主要由於微信小店交易額擴大而帶動的商家技術服務費收入增長。"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "tencent_hk00700_2025_annual_results:p016:c002",
+          "score": 23.1342,
+          "matched_terms": [
+            "腾讯控股",
+            "收入"
+          ],
+          "page": 16,
+          "anchor": "pdf page 16, bbox [70.9, 97.4, 524.4, 172.9]",
+          "document_id": "tencent_hk00700_2025_annual_results",
+          "symbol": "HK.00700",
+          "kind": "paragraph",
+          "rank_reason": "matched 2/12 query terms with weights 腾讯控股, 收入",
+          "text_preview": "－ 增值服務業務收入環比下降6% 至人民幣899 億元。本土市場遊戲收入為人民幣382 億元，環比下降11%，主要由於第四季商業化及收入的季節性下降。國際市場遊戲收入為人民幣211 億元，環比增長1%。社交網絡收入為人民幣306 億元，環比下降5%，反映本土市場手機遊戲應用收入的季節性下降。"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "tencent_hk00700_2025_annual_results:p008:c001",
+          "score": 19.4451,
+          "matched_terms": [
+            "腾讯控股",
+            "收入"
+          ],
+          "page": 8,
+          "anchor": "pdf page 8, bbox [70.9, 57.4, 530.4, 152.8]",
+          "document_id": "tencent_hk00700_2025_annual_results",
+          "symbol": "HK.00700",
+          "kind": "paragraph",
+          "rank_reason": "matched 2/12 query terms with weights 腾讯控股, 收入",
+          "text_preview": "－ 金融科技及企業服務業務截至二零二五年十二月三十一日止年度的收入同比增長8% 至人民幣2,294 億元。金融科技服務收入同比以高個位數百分比增長，乃由於理財服務、消費貸款服務及商業支付活動的收入增加。企業服務收入同比增長接近20%，得益於國內及海外對雲服務的需求（包括對AI 相關服務的需求）增加，以及由於微信小店交易額上升而帶動的商家技術服務費收入增長。"
+        }
+      ]
+    },
+    {
+      "question_id": "D22-Q4",
+      "gold_document_id": "tencent_hk00700_2026_interim_results",
+      "gold_evidence_pages": [
+        3
+      ],
+      "symbol_resolved": "HK.00700",
+      "retrieval": "keyword_retrieval.v1",
+      "question": "截至二零二六年六月三十日，腾讯控股微信及 WeChat 的合并月活跃账户数是多少？",
+      "filters": {
+        "as_of": "2026-11-19",
+        "symbol": "HK.00700",
+        "allowed_symbols": [
+          "HK.00700",
+          "HK.01698"
+        ],
+        "document_id": null
+      },
+      "filter_stats": {
+        "input_chunks": 772,
+        "rejected_permission": 0,
+        "rejected_symbol": 96,
+        "rejected_document_id": 0,
+        "rejected_as_of": 0,
+        "kept": 676
+      },
+      "query_terms": [
+        "wechat",
+        "截至二零二六年六月三十日",
+        "二零二六年六月三十日",
+        "六月三十日",
+        "截至二零二六年",
+        "腾讯控股微信及",
+        "微信",
+        "腾讯控股",
+        "微信及",
+        "的合并月活跃账户数是多少",
+        "活跃",
+        "的合并月",
+        "账户数是多少",
+        "活跃账户",
+        "数是多少",
+        "合并",
+        "月活跃账户数是多少"
+      ],
+      "candidate_chunks": 676,
+      "top_k": 5,
+      "results": [
+        {
+          "rank": 1,
+          "chunk_id": "tencent_hk00700_2025_annual_results:p003:c002",
+          "score": 19.2763,
+          "matched_terms": [
+            "wechat",
+            "微信",
+            "腾讯控股",
+            "微信及"
+          ],
+          "page": 3,
+          "anchor": "pdf page 3, bbox [70.9, 192.7, 524.4, 353.6]",
+          "document_id": "tencent_hk00700_2025_annual_results",
+          "symbol": "HK.00700",
+          "kind": "table",
+          "rank_reason": "matched 4/17 query terms with weights wechat, 微信, 腾讯控股, 微信及",
+          "text_preview": "經營資料 / 於二零二五年 | 於二零二四年 | 於二零二五年 / 十二月三十一日 | 十二月三十一日 | 同比變動 | 九月三十日 | 環比變動 / （百萬計，另有指明者除外） / 微信及WeChat的合併月活躍賬戶數 | 1,418 | 1,385 | 2% | 1,414 | 0.3% / QQ的移動終端月活躍賬戶數 | 508 | 524 | -3% | 517 | -2% / 收費增值服務訂閱會員數# | 267 | 262 | 2% | 265 |"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "tencent_hk00700_2025_annual_results:p004:c007",
+          "score": 11.0655,
+          "matched_terms": [
+            "微信",
+            "腾讯控股"
+          ],
+          "page": 4,
+          "anchor": "pdf page 4, bbox [70.9, 417.4, 524.4, 452.8]",
+          "document_id": "tencent_hk00700_2025_annual_results",
+          "symbol": "HK.00700",
+          "kind": "paragraph",
+          "rank_reason": "matched 2/17 query terms with weights 微信, 腾讯控股",
+          "text_preview": "‧ 我們提升微信的交易體驗和內容生態，推動微信小店、小遊戲及其他內容小程序的用戶參與度同比快速增長。"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "tencent_hk00700_2025_annual_results:p007:c004",
+          "score": 11.0655,
+          "matched_terms": [
+            "微信",
+            "腾讯控股"
+          ],
+          "page": 7,
+          "anchor": "pdf page 7, bbox [70.9, 557.9, 524.5, 673.3]",
+          "document_id": "tencent_hk00700_2025_annual_results",
+          "symbol": "HK.00700",
+          "kind": "paragraph",
+          "rank_reason": "matched 2/17 query terms with weights 微信, 腾讯控股",
+          "text_preview": "－ 營銷服務業務截至二零二五年十二月三十一日止年度的收入同比增長19% 至人民幣1,450 億元，主要得益於廣告單價及廣告曝光量增長。廣告單價受益於AI驅動的廣告精準定向、廣告主使用AI 製作更多廣告，以及閉環廣告（用戶點擊後可直達小程序、微信小店或小遊戲等原生交易場景）的佔比持續提升。曝光量增長主要得益於用戶對包括視頻號及微信搜一搜在內的產品參與度增加，以及廣告加載率的小幅提升。年內大多數主要行業的廣告主投放均有所增長。"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "tencent_hk00700_2026_interim_results:p003:c001",
+          "score": 7.4191,
+          "matched_terms": [
+            "wechat",
+            "腾讯控股"
+          ],
+          "page": 3,
+          "anchor": "pdf page 3, bbox [70.9, 61.9, 524.4, 249.7]",
+          "document_id": "tencent_hk00700_2026_interim_results",
+          "symbol": "HK.00700",
+          "kind": "table",
+          "rank_reason": "matched 2/17 query terms with weights wechat, 腾讯控股",
+          "text_preview": "OPERATING INFORMATION / As at | As at | Year- | As at | Quarter- / 30 June | 30 June | on-year | 31 March | on-quarter / 2026 | 2025 | change | 2026 | change / (in millions, unless specified) / Combined MAU of Weixin / and WeChat | "
+        },
+        {
+          "rank": 5,
+          "chunk_id": "tencent_hk00700_2025_annual_results:p005:c003",
+          "score": 6.0328,
+          "matched_terms": [
+            "微信",
+            "腾讯控股"
+          ],
+          "page": 5,
+          "anchor": "pdf page 5, bbox [70.9, 177.4, 524.4, 212.9]",
+          "document_id": "tencent_hk00700_2025_annual_results",
+          "symbol": "HK.00700",
+          "kind": "paragraph",
+          "rank_reason": "matched 2/17 query terms with weights 微信, 腾讯控股",
+          "text_preview": "‧ 我們通過引進頂尖AI 人才升級了團隊，建立了系統化提升基礎模型智能水平的流程，並在元寶及微信等服務中部署了新的AI 能力。"
+        }
+      ]
+    },
+    {
+      "question_id": "D22-Q5",
+      "gold_document_id": "tme_hk01698_2025_annual_results",
+      "gold_evidence_pages": [
+        3,
+        13
+      ],
+      "symbol_resolved": "HK.01698",
+      "retrieval": "keyword_retrieval.v1",
+      "question": "腾讯音乐娱乐集团截至 2025 年 12 月 31 日止年度的收入是多少？",
+      "filters": {
+        "as_of": "2026-11-19",
+        "symbol": "HK.01698",
+        "allowed_symbols": [
+          "HK.00700",
+          "HK.01698"
+        ],
+        "document_id": null
+      },
+      "filter_stats": {
+        "input_chunks": 772,
+        "rejected_permission": 0,
+        "rejected_symbol": 676,
+        "rejected_document_id": 0,
+        "rejected_as_of": 0,
+        "kept": 96
+      },
+      "query_terms": [
+        "腾讯音乐娱乐集团截至",
+        "腾讯音乐娱乐集团",
+        "娱乐集团",
+        "腾讯音乐",
+        "娱乐集团截至",
+        "日止年度的收入是多少",
+        "止年度",
+        "的收入是多少",
+        "收入",
+        "日止年度的",
+        "是多少",
+        "2025",
+        "12",
+        "31"
+      ],
+      "candidate_chunks": 96,
+      "top_k": 5,
+      "results": [
+        {
+          "rank": 1,
+          "chunk_id": "tme_hk01698_2025_annual_results:p013:c001",
+          "score": 45.803,
+          "matched_terms": [
+            "腾讯音乐娱乐集团",
+            "娱乐集团",
+            "腾讯音乐",
+            "止年度",
+            "收入",
+            "2025",
+            "12",
+            "31"
+          ],
+          "page": 13,
+          "anchor": "pdf page 13, bbox [28.3, 82.4, 564.5, 702.2]",
+          "document_id": "tme_hk01698_2025_annual_results",
+          "symbol": "HK.01698",
+          "kind": "table",
+          "rank_reason": "matched 8/14 query terms with weights 腾讯音乐娱乐集团, 娱乐集团, 腾讯音乐, 止年度, 收入, 2025, 12, 31",
+          "text_preview": "騰訊音樂娛樂集團 / 合併損益表 / 截至12月31日止三個月 截至12月31日止年度 / 2024 | 2025 | 2024 | 2025 / 人民幣 | 人民幣 | 美元 | 人民幣 | 人民幣 | 美元 / 未經審計 | 未經審計 | 未經審計 | 未經審計 | 未經審計 | 未經審計 / （百萬元，每股數據除外） （百萬元，每股數據除外） / 收入 / 在線音樂服務收入 | 5,831 | 7,099 | 1,015 | 21,742 | 26,726 | "
+        },
+        {
+          "rank": 2,
+          "chunk_id": "tme_hk01698_2025_annual_results:p014:c001",
+          "score": 31.0518,
+          "matched_terms": [
+            "腾讯音乐娱乐集团",
+            "娱乐集团",
+            "腾讯音乐",
+            "止年度",
+            "2025",
+            "12",
+            "31"
+          ],
+          "page": 14,
+          "anchor": "pdf page 14, bbox [28.3, 85.2, 561.3, 236.6]",
+          "document_id": "tme_hk01698_2025_annual_results",
+          "symbol": "HK.01698",
+          "kind": "table",
+          "rank_reason": "matched 7/14 query terms with weights 腾讯音乐娱乐集团, 娱乐集团, 腾讯音乐, 止年度, 2025, 12, 31",
+          "text_preview": "截至12月31日止三個月 截至12月31日止年度 / 2024 | 2025 | 2024 | 2025 / 人民幣 | 人民幣 | 美元 | 人民幣 | 人民幣 | 美元 / 未經審計 | 未經審計 | 未經審計 | 未經審計 | 未經審計 | 未經審計 / （百萬元，每股數據除外） （百萬元，每股數據除外） / 以下各項應佔： / 本公司權益持有人 | 1,957 | 2,203 | 315 | 6,644 | 11,056 | 1,581 / 少數股東權益 "
+        },
+        {
+          "rank": 3,
+          "chunk_id": "tme_hk01698_2025_annual_results:p019:c001",
+          "score": 31.0518,
+          "matched_terms": [
+            "腾讯音乐娱乐集团",
+            "娱乐集团",
+            "腾讯音乐",
+            "止年度",
+            "2025",
+            "12",
+            "31"
+          ],
+          "page": 19,
+          "anchor": "pdf page 19, bbox [28.3, 82.4, 564.5, 504.7]",
+          "document_id": "tme_hk01698_2025_annual_results",
+          "symbol": "HK.01698",
+          "kind": "table",
+          "rank_reason": "matched 7/14 query terms with weights 腾讯音乐娱乐集团, 娱乐集团, 腾讯音乐, 止年度, 2025, 12, 31",
+          "text_preview": "騰訊音樂娛樂集團 / 簡明合併現金流量表 / 截至12月31日止三個月 截至12月31日止年度 / 2024 | 2025 | 2024 | 2025 / 人民幣 | 人民幣 | 美元 | 人民幣 | 人民幣 | 美元 / 未經審計 | 未經審計 | 未經審計 | 未經審計 | 未經審計 | 未經審計 / （百萬元） | （百萬元） / 經營活動現金流入淨額 | 2,480 | 2,391 | 342 | 10,275 | 10,231 | 1,463 / 投資活動現"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "tme_hk01698_2025_annual_results:p016:c001",
+          "score": 30.0518,
+          "matched_terms": [
+            "腾讯音乐娱乐集团",
+            "娱乐集团",
+            "腾讯音乐",
+            "止年度",
+            "2025",
+            "12",
+            "31"
+          ],
+          "page": 16,
+          "anchor": "pdf page 16, bbox [28.3, 84.2, 561.2, 317.6]",
+          "document_id": "tme_hk01698_2025_annual_results",
+          "symbol": "HK.01698",
+          "kind": "table",
+          "rank_reason": "matched 7/14 query terms with weights 腾讯音乐娱乐集团, 娱乐集团, 腾讯音乐, 止年度, 2025, 12, 31",
+          "text_preview": "截至12月31日止三個月 截至12月31日止年度 / 2024 | 2025 | 2024 | 2025 / 人民幣 | 人民幣 | 美元 | 人民幣 | 人民幣 | 美元 / 未經審計 | 未經審計 | 未經審計 | 未經審計 | 未經審計 | 未經審計 / （百萬元，每股數據除外） （百萬元，每股數據除外） / 用於計算A類和B類普通股 / 每股盈利的股數 / 基本 | 3,075,189,032 | 3,079,832,739 | 3,079,832,739"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "tme_hk01698_2025_annual_results:p015:c001",
+          "score": 28.5546,
+          "matched_terms": [
+            "腾讯音乐娱乐集团",
+            "娱乐集团",
+            "腾讯音乐",
+            "止年度",
+            "2025",
+            "12",
+            "31"
+          ],
+          "page": 15,
+          "anchor": "pdf page 15, bbox [28.3, 82.4, 561.3, 245.2]",
+          "document_id": "tme_hk01698_2025_annual_results",
+          "symbol": "HK.01698",
+          "kind": "table",
+          "rank_reason": "matched 7/14 query terms with weights 腾讯音乐娱乐集团, 娱乐集团, 腾讯音乐, 止年度, 2025, 12, 31",
+          "text_preview": "騰訊音樂娛樂集團 / 未經審計非國際財務報告準則財務計量 / 截至12月31日止三個月 截至12月31日止年度 / 2024 | 2025 | 2024 | 2025 / 人民幣 | 人民幣 | 美元 | 人民幣 | 人民幣 | 美元 / 未經審計 | 未經審計 | 未經審計 | 未經審計 | 未經審計 | 未經審計 / （百萬元，每股數據除外） （百萬元，每股數據除外） / 期內利潤╱年內利潤 | 2,076 | 2,286 | 327 | 7,109 | 11"
+        }
+      ]
+    }
+  ]
+}
